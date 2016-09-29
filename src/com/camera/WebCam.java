@@ -141,7 +141,7 @@ public class WebCam extends CanvasFrame {
                       cvAbsDiff(image, prevImage, diff);
                       
                       cvThreshold(diff, diff, 64, 255, CV_THRESH_BINARY);
-                      
+                      cvFlip(diff, diff, 1);
                       showImage(diff);
                       
                       opencv_core.CvSeq contour = new opencv_core.CvSeq(null);
